@@ -1,0 +1,26 @@
+info:
+  name: Withdraw €150 from account 2
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/accounts/:accountId/withdrawals"
+  params:
+    - name: accountId
+      value: "2"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "amount": 75
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
