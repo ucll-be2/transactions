@@ -16,7 +16,7 @@ public class Account {
     private String owner;
 
     @Column(nullable = false)
-    BigDecimal balance;
+    private BigDecimal balance;
 
     protected Account() {
     }
