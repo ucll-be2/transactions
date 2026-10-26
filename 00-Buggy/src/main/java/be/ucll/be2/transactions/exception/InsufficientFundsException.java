@@ -2,7 +2,7 @@ package be.ucll.be2.transactions.exception;
 
 import java.math.BigDecimal;
 
-public class InsufficientFundsException extends RuntimeException {
+public class InsufficientFundsException extends Exception {
 
     private final long accountId;
     private final BigDecimal balance;

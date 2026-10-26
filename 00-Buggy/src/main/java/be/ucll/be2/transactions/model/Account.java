@@ -46,7 +46,7 @@ public class Account {
         return balance;
     }
 
-    public void withdraw(BigDecimal amount) {
+    public void withdraw(BigDecimal amount) throws InsufficientFundsException {
         if (balance.compareTo(amount) < 0) {
             throw new InsufficientFundsException(id, balance, amount);
         }

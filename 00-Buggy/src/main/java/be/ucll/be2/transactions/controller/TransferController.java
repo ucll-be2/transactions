@@ -2,6 +2,8 @@ package be.ucll.be2.transactions.controller;
 
 import be.ucll.be2.transactions.dto.TransferFundsRequest;
 import be.ucll.be2.transactions.dto.TransferFundsResponse;
+import be.ucll.be2.transactions.exception.AccountNotFoundException;
+import be.ucll.be2.transactions.exception.InsufficientFundsException;
 import be.ucll.be2.transactions.service.AccountService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +22,9 @@ public class TransferController {
     }
 
     @PostMapping
-    public TransferFundsResponse transferFunds(@Valid @RequestBody TransferFundsRequest request) {
+    public TransferFundsResponse transferFunds(
+            @Valid @RequestBody TransferFundsRequest request
+    ) throws AccountNotFoundException, InsufficientFundsException {
         return accountService.transferFunds(
                 request.fromAccountId(),
                 request.toAccountId(),
