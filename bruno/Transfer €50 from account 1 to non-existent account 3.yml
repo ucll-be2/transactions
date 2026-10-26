@@ -1,0 +1,24 @@
+info:
+  name: Transfer €50 from account 1 to non-existent account 3
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/transfers"
+  body:
+    type: json
+    data: |-
+      {
+        "fromAccountId": 1,
+        "toAccountId": 3,
+        "amount": 50
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
