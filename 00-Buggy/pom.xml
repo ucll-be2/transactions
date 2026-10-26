@@ -10,21 +10,28 @@
     </parent>
     <groupId>be.ucll.be2</groupId>
     <artifactId>transactions</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>transactions</name>
-    <description>transactions</description>
-    <url/>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Transactions</name>
+    <description>Transactions</description>
+    <url>https://github.com/ucll-be2/transactions/00-Buggy</url>
     <licenses>
         <license/>
     </licenses>
     <developers>
-        <developer/>
+        <developer>
+            <id>RockinRoel</id>
+            <name>Roel Standaert</name>
+            <email>roel.standaert@ucll.be</email>
+            <organization>UC Leuven VZW</organization>
+            <organizationUrl>https://www.ucll.be</organizationUrl>
+            <timezone>Europe/Brussels</timezone>
+        </developer>
     </developers>
     <scm>
-        <connection/>
-        <developerConnection/>
+        <connection>scm:git://github.com/ucll-be2/transactions.git</connection>
+        <developerConnection>scm:git://github.com/ucll-be2/transactions.git</developerConnection>
         <tag/>
-        <url/>
+        <url>https://github.com/ucll-be2/transactions/00-Buggy</url>
     </scm>
     <properties>
         <java.version>25</java.version>
