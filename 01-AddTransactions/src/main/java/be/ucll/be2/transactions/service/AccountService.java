@@ -21,16 +21,19 @@ public class AccountService {
         this.accountRepository = accountRepository;
     }
 
+    @Transactional(readOnly = true)
     public List<Account> getAllAccounts() {
         return accountRepository.findAll();
     }
 
+    @Transactional(readOnly = true)
     public Account getAccount(long accountId) throws AccountNotFoundException {
         return accountRepository.findById(accountId).orElseThrow(
                 () -> new AccountNotFoundException(accountId)
         );
     }
 
+    @Transactional
     public Account createAccount(String owner) {
         return accountRepository.save(new Account(owner));
     }
