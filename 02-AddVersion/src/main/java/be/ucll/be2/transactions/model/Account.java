@@ -38,6 +38,12 @@ public class Account {
         this.id = id;
     }
 
+    // Note: normally, the user does not necessarily need to see the version,
+    //       but we include it here for demonstration purposes.
+    public Long getVersion() {
+        return version;
+    }
+
     public String getOwner() {
         return owner;
     }
