@@ -65,3 +65,11 @@ daar geen zorgen over hoeven te maken, maar dan moeten ze wel opletten dat ze de
 
 Je mag zelf kiezen welke aanpak je verkiest. In deze oplossing hebben we gekozen voor
 *checked exceptions* met `rollbackFor`.
+
+## `readOnly`
+
+Aan alle andere service-methodes zullen we ook de annotatie `@Transactional` toevoegen. Dit is over het algemeen
+een goede gewoonte: zie een service-methode als een *unit of work* die in één transactie wordt uitgevoerd.
+
+Als de methode enkel data leest, kan je `@Transactional(readOnly = true)` gebruiken. Dit kan de performance verbeteren,
+omdat de database dan weet dat er geen wijzigingen zullen gebeuren en er dus geen locks nodig zijn.
